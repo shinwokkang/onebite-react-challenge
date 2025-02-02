@@ -34,7 +34,7 @@ const OrderEditor = () => {
       <div>
         <div style={{ marginBottom: 5, fontSize: 14 }}>배달 주소</div>
         <input
-          value={address}
+          // value={address}
           style={{ width: 300, padding: 5 }}
           placeholder="주소) 서울특별시 xx동 .."
           onChange={(e) => {
@@ -46,7 +46,7 @@ const OrderEditor = () => {
       <div>
         <div style={{ marginBottom: 5, fontSize: 14 }}>배달 요청사항</div>
         <textarea
-          value={request}
+          // value={request}
           style={{ width: 300, padding: 5 }}
           placeholder="배달 요청사항을 써 주세요..."
           onChange={(e) => {
