@@ -1,23 +1,17 @@
 import useExchange from "../hooks/useExchange";
+import Input from "./Input";
 
 const Viewer = () => {
-  const [exchange, changeKrwMoney] = useExchange();
+  const [exchange, changeMoney] = useExchange();
 
   return (
     <div>
       <h1>환율 변환기 (KRW-USD)</h1>
       <div>
-        krw:{" "}
-        <input
-          type="number"
-          name="krw"
-          onChange={changeKrwMoney}
-          value={exchange.krw}
-        ></input>
+        <Input currency={"krw"} value={exchange.krw} onChange={changeMoney} />
       </div>
       <div>
-        usd:{" "}
-        <input type="number" name="usd" value={exchange.usd.toFixed(2)}></input>
+        <Input currency={"usd"} value={exchange.usd} onChange={changeMoney} />
       </div>
     </div>
   );
